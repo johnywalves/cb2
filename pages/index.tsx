@@ -5,7 +5,6 @@ import React, { useMemo, useState } from "react"
 import { Main } from "../remotion/Introduction/Main"
 import {
   CompositionProps,
-  defaultIntroductionProps,
   DURATION_IN_FRAMES,
   VIDEO_FPS,
   VIDEO_HEIGHT,
@@ -35,7 +34,7 @@ const player: React.CSSProperties = {
 }
 
 const Home: NextPage = () => {
-  const [text, setText] = useState<string>(defaultIntroductionProps.title)
+  const [text, setText] = useState<string>("Introduction")
 
   const inputProps: z.infer<typeof CompositionProps> = useMemo(() => {
     return {
